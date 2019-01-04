@@ -1,0 +1,43 @@
+{
+  "Team": {
+    "description": "Represents one team with no dead members.",
+    "title": "Team",
+    "type": "object",
+    "properties": {
+      "code": {
+        "description": "Unique code of this team",
+        "type": "string",
+        "title": "code"
+      },
+      "members": {
+        "minimum": 1,
+        "type": "integer",
+        "title": "members"
+      }
+    },
+    "required": [
+      "code",
+      "members"
+    ]
+  },
+  "DeadTeam": {
+    "title": "DeadTeam",
+    "type": "object",
+    "properties": {
+      "code": {
+        "description": "Unique code of this team",
+        "type": "string",
+        "title": "code"
+      },
+      "deadMembers": {
+        "minimum": 1,
+        "type": "integer",
+        "title": "deadMembers"
+      }
+    },
+    "required": [
+      "code",
+      "deadMembers"
+    ]
+  }
+}

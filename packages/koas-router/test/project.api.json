@@ -1,0 +1,23 @@
+{
+  "Project": {
+    "description": "Represents one team with no dead members.",
+    "title": "Project",
+    "type": "object",
+    "properties": {
+      "code": {
+        "description": "Unique code of this team",
+        "type": "string",
+        "title": "code"
+      },
+      "members": {
+        "minimum": 1,
+        "type": "integer",
+        "title": "members"
+      }
+    },
+    "required": [
+      "code",
+      "members"
+    ]
+  }
+}

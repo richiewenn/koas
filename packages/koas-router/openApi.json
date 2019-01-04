@@ -1,0 +1,53 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/hello": {
+      "get": {
+        "description": "Get all teams.",
+        "summary": "Return all teams",
+        "responses": {
+          "200": {
+            "description": "Awesome stuff",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "JsonResponse",
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "title": "DeadTeam",
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "description": "Unique code of this team",
+                          "type": "string",
+                          "title": "code"
+                        },
+                        "deadMembers": {
+                          "minimum": 1,
+                          "type": "integer",
+                          "title": "deadMembers"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "deadMembers"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "version": "1.0",
+    "title": "Testing KOAS"
+  }
+}

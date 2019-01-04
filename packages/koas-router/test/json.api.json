@@ -1,0 +1,22 @@
+{
+  "JsonResponse": {
+    "$ref": "#/definitions/JsonResponse<T>"
+  },
+  "JsonResponse<T>": {
+    "title": "JsonResponse<T>",
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/definitions/T",
+        "title": "data"
+      }
+    },
+    "required": [
+      "data"
+    ]
+  },
+  "T": {
+    "title": "T",
+    "type": "object"
+  }
+}
